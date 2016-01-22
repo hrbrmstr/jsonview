@@ -1,0 +1,31 @@
+Package: jsonview
+Type: Package
+Title: View, Format, and "Pretty Print" 'JSON' Content
+Version: 0.1.0
+Date: 2016-01-22
+Authors@R: c(
+      person("Bob", "Rudis", role = c("aut", "cre"),
+             comment = "R iterface",
+             email = "bob@rudis.net"),
+      person("Vadim", "Kiryukhin", role = c("ctb", "cph"),
+             comment = "vkbeautify library"),
+      person("Ivan", "Sagalaev", role = c("ctb", "cph"),
+             comment = "highlight.js library")
+    )
+Maintainer: Bob Rudis <bob@rudis.net>
+Description: Provides utilities to view formatted and "pretty printed" HTML/XML
+    content from XML document objects, nodes, node sets and plain character HTML/XML
+    using 'vkbeautify' (by Vadim Kiryukhin) and 'highlight.js' (by Ivan Sagalaev).
+URL: http://github.com/hrbrmstr/jsonview
+BugReports: https://github.com/hrbrmstr/jsonview/issues
+License: MIT + file LICENSE
+Suggests:
+    testthat
+Depends:
+    R (>= 3.0.0)
+Imports:
+    htmlwidgets,
+    htmltools,
+    purrr,
+    jsonlite
+RoxygenNote: 5.0.1
