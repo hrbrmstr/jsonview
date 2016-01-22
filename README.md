@@ -1,10 +1,3 @@
----
-output:
-  html_document:
-    keep_md: true
-  md_document:
-    variant: markdown_github
----
 
 `jsonview` : View formatted and "pretty printed" JSON or `list`s in R
 
@@ -29,17 +22,17 @@ The following functions are implemented:
 
 ### Installation
 
-```{r eval=FALSE}
+
+```r
 devtools::install_github("hrbrmstr/jsonview")
 ```
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
-options(width=120)
-```
+
 
 ### Usage
 
-```{r eval=FALSE}
+
+```r
 library(xmlview)
 library(jsonlite)
 
