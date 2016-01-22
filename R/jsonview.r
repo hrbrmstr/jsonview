@@ -17,11 +17,50 @@
 #' @param height widget height (kinda only useful for knitting since this is
 #'        meant to be an interactive tool).
 #' @export
+#' @examples
+#' library(jsonlite)
+#'
+#' # available styles
+#' highlight_styles()
+#'
+#' # plain character
+#' txt <- '{
+#' "glossary": {
+#' "title": "example glossary",
+#' "GlossDiv": {
+#' "title": "S",
+#' "GlossList": {
+#' "GlossEntry": {
+#' "ID": "SGML",
+#' "SortAs": "SGML",
+#' "GlossTerm": "Standard Generalized Markup Language",
+#' "Acronym": "SGML",
+#' "Abbrev": "ISO 8879:1986",
+#' "GlossDef": {
+#' "para": "A meta-markup language, used to create markup languages such as DocBook.",
+#' "GlossSeeAlso": ["GML", "XML"]
+#' },
+#' "GlossSee": "markup"
+#' }
+#' }
+#' }
+#' }
+#' }'
+#'
+#' json_view(txt)
+#'
+#' doc <- fromJSON(txt)
+#' json_view(doc, style="obsidian")
+#'
+#' json_view(readLines("https://collector.torproject.org/index.json"))
+#'
+#' json_View(fromJSON("https://collector.torproject.org/index.json",
+#'                    simplifyVector=FALSE))
 json_view <- function(x, auto_unbox=TRUE,
                       style="xcode", scroll=FALSE,
                       elementId=NULL, width="100%", height=NULL) {
 
-  json_doc_name <- "doc"
+json_doc_name <- "doc"
 
   if (!inherits(x, "character") &
       inherits(substitute(x), "name")) {

@@ -33,4 +33,44 @@ Pass in a plaintext JSON or an R \code{list} to see formatted JSON in a viewer.
 \details{
 It uses the \code{jsonlite} package to deal with gnarly lists (h/t @jennybryan).
 }
+\examples{
+library(jsonlite)
+
+# available styles
+highlight_styles()
+
+# plain character
+txt <- '{
+"glossary": {
+"title": "example glossary",
+"GlossDiv": {
+"title": "S",
+"GlossList": {
+"GlossEntry": {
+"ID": "SGML",
+"SortAs": "SGML",
+"GlossTerm": "Standard Generalized Markup Language",
+"Acronym": "SGML",
+"Abbrev": "ISO 8879:1986",
+"GlossDef": {
+"para": "A meta-markup language, used to create markup languages such as DocBook.",
+"GlossSeeAlso": ["GML", "XML"]
+},
+"GlossSee": "markup"
+}
+}
+}
+}
+}'
+
+json_view(txt)
+
+doc <- fromJSON(txt)
+json_view(doc, style="obsidian")
+
+json_view(readLines("https://collector.torproject.org/index.json"))
+
+json_View(fromJSON("https://collector.torproject.org/index.json",
+                   simplifyVector=FALSE))
+}
 
