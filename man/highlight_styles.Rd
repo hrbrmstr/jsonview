@@ -8,7 +8,7 @@ highlight_styles()
 }
 \description{
 Returns a character vector of available style sheets to use when displaying
-an XML document.
+a JSON document.
 }
 \examples{
 highlight_styles()

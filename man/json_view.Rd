@@ -4,10 +4,33 @@
 \alias{json_view}
 \title{JSON viewer}
 \usage{
-json_view(x, auto_unbox = TRUE, style = "default", scroll = FALSE,
+json_view(x, auto_unbox = TRUE, style = "xcode", scroll = FALSE,
   elementId = NULL, width = "100\%", height = NULL)
 }
+\arguments{
+\item{x}{plaintext JSON or an R \code{list}}
+
+\item{auto_unbox}{passed to \code{fromJSON} (more on this when I have time for documentation)}
+
+\item{style}{CSS stylesheet to use (see \code{higlight_styles()})}
+
+\item{scroll}{should the \code{<div>} holding the HTML/XML content scroll
+(\code{TRUE}) or take up the full viewer/browser window (\code{FALSE}).
+Default is \code{FALSE} (take up the full viewer/browser window). If
+this is set to \code{TRUE}, \code{height} should be set to a value
+other than \code{NULL}.}
+
+\item{elementId}{element id}
+
+\item{width}{widget width (best to keep it at 100\%)}
+
+\item{height}{widget height (kinda only useful for knitting since this is
+meant to be an interactive tool).}
+}
 \description{
-JSON viewer
+Pass in a plaintext JSON or an R \code{list} to see formatted JSON in a viewer.
+}
+\details{
+It uses the \code{jsonlite} package to deal with gnarly lists (h/t @jennybryan).
 }
 
