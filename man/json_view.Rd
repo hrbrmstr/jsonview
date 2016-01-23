@@ -12,7 +12,7 @@ json_view(x, auto_unbox = TRUE, style = "xcode", scroll = FALSE,
 
 \item{auto_unbox}{passed to \code{fromJSON} (more on this when I have time for documentation)}
 
-\item{style}{CSS stylesheet to use (see \code{higlight_styles()})}
+\item{style}{CSS stylesheet to use (see \code{highlight_styles()})}
 
 \item{scroll}{should the \code{<div>} holding the HTML/XML content scroll
 (\code{TRUE}) or take up the full viewer/browser window (\code{FALSE}).
