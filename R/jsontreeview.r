@@ -1,4 +1,4 @@
-#' JSON tree viewer
+#' JSON & R list (virtually any object, really) tree viewer
 #'
 #' Pass in a plaintext JSON or an R \code{list} to see formatted JSON in a viewer.
 #'
@@ -15,6 +15,9 @@
 #' @param width widget width (best to keep it at 100\%)
 #' @param height widget height (kinda only useful for knitting since this is
 #'        meant to be an interactive tool).
+#' @note While this function also works with virtually any R object, large
+#'       data structures will render pretty slowly (web browsers weren't
+#'       really meant to handle this much structured, visual data)
 #' @export
 #' @examples
 #' library(jsonlite)
@@ -72,6 +75,8 @@ json_doc_name <- "doc"
     x <- paste0(x, collapse="")
   } else if (inherits(x, "list")) {
     x <- jsonlite::toJSON(x, auto_unbox=auto_unbox)
+  } else {
+    x <- jsonlite::toJSON(x, auto_unbox=auto_unbox, force=TRUE)
   }
 
   x <- base64enc::base64encode(charToRaw(x))
