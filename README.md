@@ -10,14 +10,17 @@ You can pass in:
 
 and view the formatted & pretty-printed result in the RStudio viewer or web browser.
 
-The widget uses  [vkbeautify](http://www.eslinstructor.net/vkbeautify/) and [highlight.js](https://highlightjs.org)  to do all the work.
+The widget uses  [vkbeautify](http://www.eslinstructor.net/vkbeautify/), [highlight.js](https://highlightjs.org) and 
+[jquery.json-treeview](https://github.com/bazh/a.json-view) to do all the work.
 
 The following functions are implemented:
 
-- `json_view`: view JSON
+- `json_view`: view JSON, formatted & pretty-printed
+- `json_tree_view`: view JSON in a collapsable tree view
 
 ### News
 
+- Version 0.1.0 : `json_tree_view`
 - Version 0.1.0 released
 
 ### Installation
@@ -64,11 +67,17 @@ txt <- '{
 }'
   
 json_view(txt)
+json_tree_view(txt)
 
 doc <- fromJSON(txt)
 json_view(doc, style="obsidian")
+json_tree_view(doc)
 
-json_view(readLines("https://collector.torproject.org/index.json"))
+json_view(readLines("https://collector.torproject.org/index.json", warn=FALSE))
+
+json_tree_view(readLines("https://collector.torproject.org/index.json", warn=FALSE))
+
+json_tree_view(fromJSON("https://collector.torproject.org/index.json"))
 
 json_view(fromJSON("https://collector.torproject.org/index.json",
                    simplifyVector=FALSE))
