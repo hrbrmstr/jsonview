@@ -32,7 +32,7 @@ HTMLWidgets.widget({
 
     if (param.scroll) { el.style.overflow = "scroll" }
 
-    el.innerHTML = '<pre><code class="html jsondiv"></code></pre>';
+    el.innerHTML = '<pre><code class="json jsondiv"></code></pre>';
 
     self.json_div = $qs("div#" + el.id + " > pre > code.jsondiv");
 
