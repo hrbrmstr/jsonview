@@ -6,6 +6,6 @@
 #' @name jsonview
 #' @docType package
 #' @author Bob Rudis (@@hrbrmstr)
-#' @import htmlwidgets htmltools purrr
+#' @import htmlwidgets htmltools purrr curl
 #' @importFrom jsonlite fromJSON toJSON
 NULL

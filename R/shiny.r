@@ -17,5 +17,5 @@ jsonviewOutput <- function(outputId, width = '100%', height = '400px'){
 #' @export
 renderJsonview <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
-  htmlwidgets::shinyRenderWidget(expr, xmlviewOutput, env, quoted = TRUE)
+  htmlwidgets::shinyRenderWidget(expr, jsonviewOutput, env, quoted = TRUE)
 }

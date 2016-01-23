@@ -51,11 +51,13 @@
 #'
 #' doc <- fromJSON(txt)
 #' json_view(doc, style="obsidian")
+#' \dontrun{
+#' json_view(readLines("https://collector.torproject.org/index.json",
+#'                     warn=FALSE))
 #'
-#' json_view(readLines("https://collector.torproject.org/index.json"))
-#'
-#' json_View(fromJSON("https://collector.torproject.org/index.json",
+#' json_view(fromJSON("https://collector.torproject.org/index.json",
 #'                    simplifyVector=FALSE))
+#' }
 json_view <- function(x, auto_unbox=TRUE,
                       style="xcode", scroll=FALSE,
                       elementId=NULL, width="100%", height=NULL) {

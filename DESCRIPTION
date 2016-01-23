@@ -27,5 +27,6 @@ Imports:
     htmlwidgets,
     htmltools,
     purrr,
+    curl,
     jsonlite
 RoxygenNote: 5.0.1
