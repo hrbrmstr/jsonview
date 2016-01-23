@@ -27,7 +27,7 @@ The following functions are implemented:
 
 ### News
 
-- Version 0.1.0 : `json_tree_view`
+- Version 0.2.0 : `json_tree_view`
 - Version 0.1.0 released
 
 ### Installation
