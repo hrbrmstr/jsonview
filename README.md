@@ -70,6 +70,6 @@ json_view(doc, style="obsidian")
 
 json_view(readLines("https://collector.torproject.org/index.json"))
 
-json_View(fromJSON("https://collector.torproject.org/index.json",
+json_view(fromJSON("https://collector.torproject.org/index.json",
                    simplifyVector=FALSE))
 ```

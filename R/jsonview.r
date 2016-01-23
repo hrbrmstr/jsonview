@@ -6,7 +6,7 @@
 #'
 #' @param x plaintext JSON or an R \code{list}
 #' @param auto_unbox passed to \code{fromJSON} (more on this when I have time for documentation)
-#' @param style CSS stylesheet to use (see \code{higlight_styles()})
+#' @param style CSS stylesheet to use (see \code{highlight_styles()})
 #' @param scroll should the \code{<div>} holding the HTML/XML content scroll
 #'        (\code{TRUE}) or take up the full viewer/browser window (\code{FALSE}).
 #'        Default is \code{FALSE} (take up the full viewer/browser window). If
