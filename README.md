@@ -1,14 +1,24 @@
 
 `jsonview` : View formatted and "pretty printed" JSON or `list`s in R
 
+(if you need XML viewing in R check out `jsonview`'s sister package, [xmlview](https://github.com/hrbrmstr/jsonview))
+
 It is intended for interactive use. When working with gnarly lists or JSON data, it's often times advantageous to be able to see the document in a more formatted way.
 
 You can pass in:
 
 - plain character JSON
-- an R `list` object
+- an R `list` object (any R object, really)
 
 and view the formatted & pretty-printed result in the RStudio viewer or web browser.
+
+Here's an example of the collapsable tree view generaged by:
+
+```r
+json_tree_view(fromJSON("https://collector.torproject.org/index.json"))
+```
+
+![](jsonview.png)
 
 The widget uses  [vkbeautify](http://www.eslinstructor.net/vkbeautify/), [highlight.js](https://highlightjs.org) and 
 [jquery.json-treeview](https://github.com/bazh/a.json-view) to do all the work.
