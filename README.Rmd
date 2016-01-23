@@ -22,6 +22,7 @@ The widget uses  [vkbeautify](http://www.eslinstructor.net/vkbeautify/) and [hig
 The following functions are implemented:
 
 - `json_view`: view JSON
+- `json_tree_view`: view JSON
 
 ### News
 
@@ -71,11 +72,17 @@ txt <- '{
 }'
   
 json_view(txt)
+json_tree_view(txt)
 
 doc <- fromJSON(txt)
 json_view(doc, style="obsidian")
+json_tree_view(doc)
 
-json_view(readLines("https://collector.torproject.org/index.json"))
+json_view(readLines("https://collector.torproject.org/index.json", warn=FALSE))
+
+json_tree_view(readLines("https://collector.torproject.org/index.json", warn=FALSE))
+
+json_tree_view(fromJSON("https://collector.torproject.org/index.json"))
 
 json_view(fromJSON("https://collector.torproject.org/index.json",
                    simplifyVector=FALSE))

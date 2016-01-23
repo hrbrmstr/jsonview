@@ -9,6 +9,9 @@
 This uses \code{vkbeautify} and \code{highlight.js} to format and
 "pretty print" JSON content & lists in an \code{htmlwidget} pane.
 }
+\details{
+Also uses \code{jquery.json-view} for the interactive tree view
+}
 \author{
 Bob Rudis (@hrbrmstr)
 }
