@@ -17,9 +17,9 @@ HTMLWidgets.widget({
     self.thel = el;
     self.glob = {} ;
 
-    self.glob.xmlDocName = param.jsonDocName;
-    self.glob.xmlDoc     = param.jsonDoc;
-    self.glob.orig       = param.jsonDoc;
+    self.glob.jsonDocName = param.jsonDocName;
+    self.glob.jsonDoc     = param.jsonDoc;
+    self.glob.orig        = param.jsonDoc;
 
     var link = document.createElement("link");
     link.href  = "lib/highlightjs-9.0.0/styles/" +
