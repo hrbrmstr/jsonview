@@ -8,7 +8,7 @@ output:
 
 `jsonview` : View formatted and "pretty printed" JSON or `list`s in R
 
-(if you need XML viewing in R check out `jsonview`'s sister package, [xmlview](https://github.com/hrbrmstr/jsonview))
+(if you need XML viewing in R check out `jsonview`'s sister package, [xmlview](https://github.com/hrbrmstr/xmlview))
 
 It is intended for interactive use. When working with gnarly lists or JSON data, it's often times advantageous to be able to see the document in a more formatted way.
 
