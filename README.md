@@ -1,7 +1,14 @@
+---
+output:
+  html_document:
+    keep_md: true
+  md_document:
+    variant: markdown_github
+---
 
 `jsonview` : View formatted and "pretty printed" JSON or `list`s in R
 
-(if you need XML viewing in R check out `jsonview`'s sister package, [xmlview](https://github.com/hrbrmstr/jsonview))
+(if you need XML viewing in R check out `jsonview`'s sister package, [xmlview](https://github.com/hrbrmstr/xmlview))
 
 It is intended for interactive use. When working with gnarly lists or JSON data, it's often times advantageous to be able to see the document in a more formatted way.
 
@@ -15,7 +22,7 @@ and view the formatted & pretty-printed result in the RStudio viewer or web brow
 Here's an example of the collapsable tree view generaged by:
 
 ```r
-json_tree_view(fromJSON("https://collector.torproject.org/index.json"))
+json_tree_view(fromJSON("https://collector.torproject.org/index/index.json"))
 ```
 
 ![](jsonview.png)
@@ -83,12 +90,12 @@ doc <- fromJSON(txt)
 json_view(doc, style="obsidian")
 json_tree_view(doc)
 
-json_view(readLines("https://collector.torproject.org/index.json", warn=FALSE))
+json_view(readLines("https://collector.torproject.org/index/index.json", warn=FALSE))
 
-json_tree_view(readLines("https://collector.torproject.org/index.json", warn=FALSE))
+json_tree_view(readLines("https://collector.torproject.org/index/index.json", warn=FALSE))
 
-json_tree_view(fromJSON("https://collector.torproject.org/index.json"))
+json_tree_view(fromJSON("https://collector.torproject.org/index/index.json"))
 
-json_view(fromJSON("https://collector.torproject.org/index.json",
+json_view(fromJSON("https://collector.torproject.org/index/index.json",
                    simplifyVector=FALSE))
 ```
